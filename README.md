@@ -53,7 +53,7 @@ Create n-grams from an array of words.
 
 | Parameter | Type                     | Description                                                                    | 
 |-----------|--------------------------|--------------------------------------------------------------------------------| 
-| words     | `ARRAY [INTEGER] = STRING` | An array of strings e.g. `["these", "are", "words"]`                           | 
+| words     | `ARRAY [INTEGER] = STRING` | An array of words e.g. `["these", "are", "words"]`                           | 
 | n         | `INTEGER`                  | Size of the n-grams, e.g. `2` will create bigrams `["these are", "are words"]` | 
 
 Returns an array of n-grams of size `n` (`ARRAY [INTEGER] = STRING`).
@@ -72,6 +72,18 @@ Output (truncated):
   'turning in the widening gyre',
 ...
 ```
+
+### SkipGrams
+
+Create skip-grams from an array of words.
+
+| Parameter         | Type                       | Description                                                                                                                                                                                                                                                                             | 
+|-------------------|----------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------| 
+| words             | `ARRAY [INTEGER] = STRING` | An array of words e.g. `["these", "are", "words"]`                                                                                                                                                                                                                                      | 
+| size              | `INTEGER`                  | Size of the n-grams e.g. `2`: `"these are", "are words"`                                                                                                                                                                                                                                | 
+| distance          | `INTEGER`                  | Distance to skip to create skip-grams, e.g. `5` will create skip-grams using the base word (or n-gram) and n-grams from the 5 following words.                                                                                                                                          | 
+| sortForDuplicates | `INTEGER`                  | Pass `__ngrams.SORT_NGRAMS` or `__ngrams.DONT_SORT_NGRAMS`. Sorting n-grams alphabetically can help flag up duplicates e.g. when creating a bag of words/n-grams/skip-grams. If you only care about pairing n-grams by proximity but not by direction, use `__ngrams.DONT_SORT_NGRAMS`. | 
+
 
 ### 
 
