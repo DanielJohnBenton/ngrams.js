@@ -49,7 +49,7 @@ See documentation below for more information.
 
 ### Ngrams
 
-Create n-grams from an array of words.
+Create [n-grams](https://en.wikipedia.org/wiki/N-gram#Examples) from an array of words.
 
 | Parameter | Type                     | Description                                                                    | 
 |-----------|--------------------------|--------------------------------------------------------------------------------| 
@@ -75,7 +75,7 @@ Output (truncated):
 
 ### SkipGrams
 
-Create skip-grams from an array of words.
+Create [skip-grams](https://en.wikipedia.org/wiki/N-gram#Skip-gram) from an array of words.
 
 | Parameter         | Type                       | Description                                                                                                                                                                                                                                                                             | 
 |-------------------|----------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------| 
