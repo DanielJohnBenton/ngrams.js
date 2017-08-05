@@ -124,7 +124,16 @@ Output (truncated):
 ...
 ```
 
-### 
+### :shell: BagOfNgrams
+
+Remove duplicates from an array of words or n-grams. Can be case sensitive or insensitive by passing `__ngrams.CASE_SENSITIVE` or `__ngrams.CASE_INSENSITIVE`.
+
+| Parameter       | Type                       | Description                                                                                                                                                                                                                                              | 
+|-----------------|----------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------| 
+| words           | `ARRAY [INTEGER] = STRING` | An array of words e.g. `["these", "are", "words"]`.                                                                                                                                                                                                      | 
+| n               | `INTEGER`                  | Size of the n-grams e.g. `2` creates bigrams `["these are", "are words"]`                                                                                                                                                                                | 
+| caseSensitivity | `INTEGER`                  | Pass `__ngrams.CASE_SENSITIVE` or `__ngrams.CASE_INSENSITIVE`. Case insensitive calls will ignore differences in case when removing duplicates e.g. `"Turning"`, `"turning"`, `"TURNING"` will all be seen as identical and reduces to just `"Turning"`. | 
+
 
 ## Acknowledgements
 - [CSV to Markdown Table Generator](https://donatstudios.com/CsvToMarkdownTable) - Donat Studios
