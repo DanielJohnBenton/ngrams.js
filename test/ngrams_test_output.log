@@ -1,0 +1,497 @@
+
+################################ N GRAMS ################################
+
+---
+N-gram size: 1
+Turning / and / turning / in / the / widening / gyre / The / falcon / cannot / hear / the / falconer / Things / fall / apart / the / centre / cannot / hold / Mere / anarchy / is / loosed / upon / the / world
+---
+N-gram size: 2
+Turning and / and turning / turning in / in the / the widening / widening gyre / gyre The / The falcon / falcon cannot / cannot hear / hear the / the falconer / falconer Things / Things fall / fall apart / apart the / the centre / centre cannot / cannot hold / hold Mere / Mere anarchy / anarchy is / is loosed / loosed upon / upon the / the world
+---
+N-gram size: 3
+Turning and turning / and turning in / turning in the / in the widening / the widening gyre / widening gyre The / gyre The falcon / The falcon cannot / falcon cannot hear / cannot hear the / hear the falconer / the falconer Things / falconer Things fall / Things fall apart / fall apart the / apart the centre / the centre cannot / centre cannot hold / cannot hold Mere / hold Mere anarchy / Mere anarchy is / anarchy is loosed / is loosed upon / loosed upon the / upon the world
+---
+N-gram size: 4
+Turning and turning in / and turning in the / turning in the widening / in the widening gyre / the widening gyre The / widening gyre The falcon / gyre The falcon cannot / The falcon cannot hear / falcon cannot hear the / cannot hear the falconer / hear the falconer Things / the falconer Things fall / falconer Things fall apart / Things fall apart the / fall apart the centre / apart the centre cannot / the centre cannot hold / centre cannot hold Mere / cannot hold Mere anarchy / hold Mere anarchy is / Mere anarchy is loosed / anarchy is loosed upon / is loosed upon the / loosed upon the world
+---
+N-gram size: 5
+Turning and turning in the / and turning in the widening / turning in the widening gyre / in the widening gyre The / the widening gyre The falcon / widening gyre The falcon cannot / gyre The falcon cannot hear / The falcon cannot hear the / falcon cannot hear the falconer / cannot hear the falconer Things / hear the falconer Things fall / the falconer Things fall apart / falconer Things fall apart the / Things fall apart the centre / fall apart the centre cannot / apart the centre cannot hold / the centre cannot hold Mere / centre cannot hold Mere anarchy / cannot hold Mere anarchy is / hold Mere anarchy is loosed / Mere anarchy is loosed upon / anarchy is loosed upon the / is loosed upon the world
+---
+N-gram size: 27
+Turning and turning in the widening gyre The falcon cannot hear the falconer Things fall apart the centre cannot hold Mere anarchy is loosed upon the world
+---
+N-gram size: 28
+
+
+############################## SKIP GRAMS ###############################
+
+---
+N: 1 Skip: 1 (with sorting)
+--> and / Turning
+--> and / turning
+--> in / turning
+--> in / the
+--> the / widening
+--> gyre / widening
+--> gyre / The
+--> falcon / The
+--> cannot / falcon
+--> cannot / hear
+--> hear / the
+--> falconer / the
+--> falconer / Things
+--> fall / Things
+--> apart / fall
+--> apart / the
+--> centre / the
+--> cannot / centre
+--> cannot / hold
+--> hold / Mere
+--> anarchy / Mere
+--> anarchy / is
+--> is / loosed
+--> loosed / upon
+--> the / upon
+--> the / world
+---
+N: 1 Skip: 5 (with sorting)
+--> and / Turning
+--> turning / Turning
+--> in / Turning
+--> the / Turning
+--> Turning / widening
+--> and / turning
+--> and / in
+--> and / the
+--> and / widening
+--> and / gyre
+--> in / turning
+--> the / turning
+--> turning / widening
+--> gyre / turning
+--> The / turning
+--> in / the
+--> in / widening
+--> gyre / in
+--> in / The
+--> falcon / in
+--> the / widening
+--> gyre / the
+--> the / The
+--> falcon / the
+--> cannot / the
+--> gyre / widening
+--> The / widening
+--> falcon / widening
+--> cannot / widening
+--> hear / widening
+--> gyre / The
+--> falcon / gyre
+--> cannot / gyre
+--> gyre / hear
+--> gyre / the
+--> falcon / The
+--> cannot / The
+--> hear / The
+--> the / The
+--> falconer / The
+--> cannot / falcon
+--> falcon / hear
+--> falcon / the
+--> falcon / falconer
+--> falcon / Things
+--> cannot / hear
+--> cannot / the
+--> cannot / falconer
+--> cannot / Things
+--> cannot / fall
+--> hear / the
+--> falconer / hear
+--> hear / Things
+--> fall / hear
+--> apart / hear
+--> falconer / the
+--> the / Things
+--> fall / the
+--> apart / the
+--> the / the
+--> falconer / Things
+--> falconer / fall
+--> apart / falconer
+--> falconer / the
+--> centre / falconer
+--> fall / Things
+--> apart / Things
+--> the / Things
+--> centre / Things
+--> cannot / Things
+--> apart / fall
+--> fall / the
+--> centre / fall
+--> cannot / fall
+--> fall / hold
+--> apart / the
+--> apart / centre
+--> apart / cannot
+--> apart / hold
+--> apart / Mere
+--> centre / the
+--> cannot / the
+--> hold / the
+--> Mere / the
+--> anarchy / the
+--> cannot / centre
+--> centre / hold
+--> centre / Mere
+--> anarchy / centre
+--> centre / is
+--> cannot / hold
+--> cannot / Mere
+--> anarchy / cannot
+--> cannot / is
+--> cannot / loosed
+--> hold / Mere
+--> anarchy / hold
+--> hold / is
+--> hold / loosed
+--> hold / upon
+--> anarchy / Mere
+--> is / Mere
+--> loosed / Mere
+--> Mere / upon
+--> Mere / the
+--> anarchy / is
+--> anarchy / loosed
+--> anarchy / upon
+--> anarchy / the
+--> anarchy / world
+--> is / loosed
+--> is / upon
+--> is / the
+--> is / world
+--> loosed / upon
+--> loosed / the
+--> loosed / world
+--> the / upon
+--> upon / world
+--> the / world
+---
+N: 2 Skip: 5 (with sorting)
+--> and turning / Turning and
+--> Turning and / turning in
+--> in the / Turning and
+--> the widening / Turning and
+--> Turning and / widening gyre
+--> and turning / turning in
+--> and turning / in the
+--> and turning / the widening
+--> and turning / widening gyre
+--> and turning / gyre The
+--> in the / turning in
+--> the widening / turning in
+--> turning in / widening gyre
+--> gyre The / turning in
+--> The falcon / turning in
+--> in the / the widening
+--> in the / widening gyre
+--> gyre The / in the
+--> in the / The falcon
+--> falcon cannot / in the
+--> the widening / widening gyre
+--> gyre The / the widening
+--> The falcon / the widening
+--> falcon cannot / the widening
+--> cannot hear / the widening
+--> gyre The / widening gyre
+--> The falcon / widening gyre
+--> falcon cannot / widening gyre
+--> cannot hear / widening gyre
+--> hear the / widening gyre
+--> gyre The / The falcon
+--> falcon cannot / gyre The
+--> cannot hear / gyre The
+--> gyre The / hear the
+--> gyre The / the falconer
+--> falcon cannot / The falcon
+--> cannot hear / The falcon
+--> hear the / The falcon
+--> The falcon / the falconer
+--> falconer Things / The falcon
+--> cannot hear / falcon cannot
+--> falcon cannot / hear the
+--> falcon cannot / the falconer
+--> falcon cannot / falconer Things
+--> falcon cannot / Things fall
+--> cannot hear / hear the
+--> cannot hear / the falconer
+--> cannot hear / falconer Things
+--> cannot hear / Things fall
+--> cannot hear / fall apart
+--> hear the / the falconer
+--> falconer Things / hear the
+--> hear the / Things fall
+--> fall apart / hear the
+--> apart the / hear the
+--> falconer Things / the falconer
+--> the falconer / Things fall
+--> fall apart / the falconer
+--> apart the / the falconer
+--> the centre / the falconer
+--> falconer Things / Things fall
+--> falconer Things / fall apart
+--> apart the / falconer Things
+--> falconer Things / the centre
+--> centre cannot / falconer Things
+--> fall apart / Things fall
+--> apart the / Things fall
+--> the centre / Things fall
+--> centre cannot / Things fall
+--> cannot hold / Things fall
+--> apart the / fall apart
+--> fall apart / the centre
+--> centre cannot / fall apart
+--> cannot hold / fall apart
+--> fall apart / hold Mere
+--> apart the / the centre
+--> apart the / centre cannot
+--> apart the / cannot hold
+--> apart the / hold Mere
+--> apart the / Mere anarchy
+--> centre cannot / the centre
+--> cannot hold / the centre
+--> hold Mere / the centre
+--> Mere anarchy / the centre
+--> anarchy is / the centre
+--> cannot hold / centre cannot
+--> centre cannot / hold Mere
+--> centre cannot / Mere anarchy
+--> anarchy is / centre cannot
+--> centre cannot / is loosed
+--> cannot hold / hold Mere
+--> cannot hold / Mere anarchy
+--> anarchy is / cannot hold
+--> cannot hold / is loosed
+--> cannot hold / loosed upon
+--> hold Mere / Mere anarchy
+--> anarchy is / hold Mere
+--> hold Mere / is loosed
+--> hold Mere / loosed upon
+--> hold Mere / upon the
+--> anarchy is / Mere anarchy
+--> is loosed / Mere anarchy
+--> loosed upon / Mere anarchy
+--> Mere anarchy / upon the
+--> Mere anarchy / the world
+--> anarchy is / is loosed
+--> anarchy is / loosed upon
+--> anarchy is / upon the
+--> anarchy is / the world
+--> is loosed / loosed upon
+--> is loosed / upon the
+--> is loosed / the world
+--> loosed upon / upon the
+--> loosed upon / the world
+--> the world / upon the
+---
+N: 3 Skip: 5 (with sorting)
+--> and turning in / Turning and turning
+--> Turning and turning / turning in the
+--> in the widening / Turning and turning
+--> the widening gyre / Turning and turning
+--> Turning and turning / widening gyre The
+--> and turning in / turning in the
+--> and turning in / in the widening
+--> and turning in / the widening gyre
+--> and turning in / widening gyre The
+--> and turning in / gyre The falcon
+--> in the widening / turning in the
+--> the widening gyre / turning in the
+--> turning in the / widening gyre The
+--> gyre The falcon / turning in the
+--> The falcon cannot / turning in the
+--> in the widening / the widening gyre
+--> in the widening / widening gyre The
+--> gyre The falcon / in the widening
+--> in the widening / The falcon cannot
+--> falcon cannot hear / in the widening
+--> the widening gyre / widening gyre The
+--> gyre The falcon / the widening gyre
+--> The falcon cannot / the widening gyre
+--> falcon cannot hear / the widening gyre
+--> cannot hear the / the widening gyre
+--> gyre The falcon / widening gyre The
+--> The falcon cannot / widening gyre The
+--> falcon cannot hear / widening gyre The
+--> cannot hear the / widening gyre The
+--> hear the falconer / widening gyre The
+--> gyre The falcon / The falcon cannot
+--> falcon cannot hear / gyre The falcon
+--> cannot hear the / gyre The falcon
+--> gyre The falcon / hear the falconer
+--> gyre The falcon / the falconer Things
+--> falcon cannot hear / The falcon cannot
+--> cannot hear the / The falcon cannot
+--> hear the falconer / The falcon cannot
+--> The falcon cannot / the falconer Things
+--> falconer Things fall / The falcon cannot
+--> cannot hear the / falcon cannot hear
+--> falcon cannot hear / hear the falconer
+--> falcon cannot hear / the falconer Things
+--> falcon cannot hear / falconer Things fall
+--> falcon cannot hear / Things fall apart
+--> cannot hear the / hear the falconer
+--> cannot hear the / the falconer Things
+--> cannot hear the / falconer Things fall
+--> cannot hear the / Things fall apart
+--> cannot hear the / fall apart the
+--> hear the falconer / the falconer Things
+--> falconer Things fall / hear the falconer
+--> hear the falconer / Things fall apart
+--> fall apart the / hear the falconer
+--> apart the centre / hear the falconer
+--> falconer Things fall / the falconer Things
+--> the falconer Things / Things fall apart
+--> fall apart the / the falconer Things
+--> apart the centre / the falconer Things
+--> the centre cannot / the falconer Things
+--> falconer Things fall / Things fall apart
+--> falconer Things fall / fall apart the
+--> apart the centre / falconer Things fall
+--> falconer Things fall / the centre cannot
+--> centre cannot hold / falconer Things fall
+--> fall apart the / Things fall apart
+--> apart the centre / Things fall apart
+--> the centre cannot / Things fall apart
+--> centre cannot hold / Things fall apart
+--> cannot hold Mere / Things fall apart
+--> apart the centre / fall apart the
+--> fall apart the / the centre cannot
+--> centre cannot hold / fall apart the
+--> cannot hold Mere / fall apart the
+--> fall apart the / hold Mere anarchy
+--> apart the centre / the centre cannot
+--> apart the centre / centre cannot hold
+--> apart the centre / cannot hold Mere
+--> apart the centre / hold Mere anarchy
+--> apart the centre / Mere anarchy is
+--> centre cannot hold / the centre cannot
+--> cannot hold Mere / the centre cannot
+--> hold Mere anarchy / the centre cannot
+--> Mere anarchy is / the centre cannot
+--> anarchy is loosed / the centre cannot
+--> cannot hold Mere / centre cannot hold
+--> centre cannot hold / hold Mere anarchy
+--> centre cannot hold / Mere anarchy is
+--> anarchy is loosed / centre cannot hold
+--> centre cannot hold / is loosed upon
+--> cannot hold Mere / hold Mere anarchy
+--> cannot hold Mere / Mere anarchy is
+--> anarchy is loosed / cannot hold Mere
+--> cannot hold Mere / is loosed upon
+--> cannot hold Mere / loosed upon the
+--> hold Mere anarchy / Mere anarchy is
+--> anarchy is loosed / hold Mere anarchy
+--> hold Mere anarchy / is loosed upon
+--> hold Mere anarchy / loosed upon the
+--> hold Mere anarchy / upon the world
+--> anarchy is loosed / Mere anarchy is
+--> is loosed upon / Mere anarchy is
+--> loosed upon the / Mere anarchy is
+--> Mere anarchy is / upon the world
+--> anarchy is loosed / is loosed upon
+--> anarchy is loosed / loosed upon the
+--> anarchy is loosed / upon the world
+--> is loosed upon / loosed upon the
+--> is loosed upon / upon the world
+--> loosed upon the / upon the world
+---
+N: 1 Skip: 1 (WITHOUT sorting)
+--> Turning / and
+--> and / turning
+--> turning / in
+--> in / the
+--> the / widening
+--> widening / gyre
+--> gyre / The
+--> The / falcon
+--> falcon / cannot
+--> cannot / hear
+--> hear / the
+--> the / falconer
+--> falconer / Things
+--> Things / fall
+--> fall / apart
+--> apart / the
+--> the / centre
+--> centre / cannot
+--> cannot / hold
+--> hold / Mere
+--> Mere / anarchy
+--> anarchy / is
+--> is / loosed
+--> loosed / upon
+--> upon / the
+--> the / world
+
+############################## BAG OF NGRAMS ###############################
+
+---
+N: 1 Case sensitive: YES
+Turning / and / turning / in / the / widening / gyre / The / falcon / cannot / hear / falconer / Things / fall / apart / centre / hold / Mere / anarchy / is / loosed / upon / world
+---
+N: 1 Case sensitive: NO
+Turning / and / in / the / widening / gyre / falcon / cannot / hear / falconer / Things / fall / apart / centre / hold / Mere / anarchy / is / loosed / upon / world
+---
+N: 2 Case sensitive: NO
+Turning and / and turning / turning in / in the / the widening / widening gyre / gyre The / The falcon / falcon cannot / cannot hear / hear the / the falconer / falconer Things / Things fall / fall apart / apart the / the centre / centre cannot / cannot hold / hold Mere / Mere anarchy / anarchy is / is loosed / loosed upon / upon the / the world
+
+############################## BAG OF SKIPGRAMS ###############################
+
+---
+N: 1 Skip: 5 Sort ngrams: YES Case sensitive: NO
+--> and / this
+--> that / this
+--> are / this
+--> and / that
+--> and / are
+--> and / and
+--> are / that
+--> that / that
+---
+N: 1 Skip: 5 Sort ngrams: NO Case sensitive: NO
+--> this / and
+--> this / that
+--> this / are
+--> and / that
+--> and / are
+--> and / and
+--> and / this
+--> that / are
+--> that / that
+--> that / and
+--> that / this
+--> are / that
+--> are / and
+--> are / this
+---
+N: 1 Skip: 5 Sort ngrams: YES Case sensitive: YES
+--> and / this
+--> That / this
+--> are / this
+--> that / this
+--> and / That
+--> and / are
+--> and / that
+--> and / and
+--> are / That
+--> that / That
+--> are / that
+
+############################## BAG OF WORDS ###############################
+
+---
+Case sensitive: NO
+Turning / and / in / the / widening / gyre / falcon / cannot / hear / falconer / Things / fall / apart / centre / hold / Mere / anarchy / is / loosed / upon / world
+---
+Case sensitive: YES
+Turning / and / turning / in / the / widening / gyre / The / falcon / cannot / hear / falconer / Things / fall / apart / centre / hold / Mere / anarchy / is / loosed / upon / world
