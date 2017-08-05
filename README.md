@@ -47,7 +47,7 @@ See documentation below for more information.
 
 ## Methods
 
-### Ngrams
+### :shell: Ngrams
 
 Create [n-grams](https://en.wikipedia.org/wiki/N-gram#Examples) from an array of words.
 
@@ -73,7 +73,7 @@ Output (truncated):
 ...
 ```
 
-### SkipGrams
+### :shell: SkipGrams
 
 Create [skip-grams](https://en.wikipedia.org/wiki/N-gram#Skip-gram) from an array of words.
 
