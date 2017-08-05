@@ -44,3 +44,51 @@ Output:
 ```
 
 See documentation below for more information.
+
+## Methods
+
+### Ngrams
+
+Create n-grams from an array of words.
+
+| Parameter | Type                     | Description                                                                    | 
+|-----------|--------------------------|--------------------------------------------------------------------------------| 
+| words     | ARRAY [INTEGER] = STRING | An array of strings e.g. `["these", "are", "words"]`                           | 
+| n         | INTEGER                  | Size of the n-grams, e.g. `2` will create bigrams `["these are", "are words"]` | 
+
+```
+let words = __ngrams.SanitiseToWords("   Turning and turning in the widening gyre\r\n    The falcon cannot hear the falconer;\r\n    Things fall apart; the centre cannot hold;\r\n    Mere anarchy is loosed upon the world   ");
+let ngrams = __ngrams.Ngrams(words, 5);
+console.log(ngrams);
+```
+
+Output (truncated):
+
+```
+[ 'Turning and turning in the',
+  'and turning in the widening',
+  'turning in the widening gyre',
+...
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
