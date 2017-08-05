@@ -53,8 +53,10 @@ Create n-grams from an array of words.
 
 | Parameter | Type                     | Description                                                                    | 
 |-----------|--------------------------|--------------------------------------------------------------------------------| 
-| words     | ARRAY [INTEGER] = STRING | An array of strings e.g. `["these", "are", "words"]`                           | 
-| n         | INTEGER                  | Size of the n-grams, e.g. `2` will create bigrams `["these are", "are words"]` | 
+| words     | `ARRAY [INTEGER] = STRING` | An array of strings e.g. `["these", "are", "words"]`                           | 
+| n         | `INTEGER`                  | Size of the n-grams, e.g. `2` will create bigrams `["these are", "are words"]` | 
+
+Returns an array of n-grams of size `n` (`ARRAY [INTEGER] = STRING`).
 
 ```
 let words = __ngrams.SanitiseToWords("   Turning and turning in the widening gyre\r\n    The falcon cannot hear the falconer;\r\n    Things fall apart; the centre cannot hold;\r\n    Mere anarchy is loosed upon the world   ");
@@ -71,7 +73,10 @@ Output (truncated):
 ...
 ```
 
+### 
 
+## Acknowledgements
+- [CSV to Markdown Table Generator](https://donatstudios.com/CsvToMarkdownTable) - Donat Studios
 
 
 
