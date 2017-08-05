@@ -116,7 +116,7 @@ Output (truncated):
 
 ```
 [ [ 'and', 'Turning' ],
-  [ 'turning', 'Turning'
+  [ 'turning', 'Turning' ],
   [ 'and', 'turning' ],
   [ 'and', 'in' ],
   [ 'in', 'turning' ],
