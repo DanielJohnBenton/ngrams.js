@@ -8,7 +8,7 @@ Also has a simple function to sanitise input text and split it into words for us
 Put ngrams.js in your `node_modules` folder and require it:
 
 ```
-let words 
+let __ngrams = require("ngrams");
 ```
 
 ## Input
@@ -17,12 +17,10 @@ These methods take an array of words to turn into n-grams, skip-grams, etc.
 
 ```
 "use strict";
-
 let __ngrams = require("ngrams");
 
 // Create 2-grams
 let ngrams = __ngrams.Ngrams(["these", "are", "some", "words"], 2);
-
 console.log(ngrams);
 ```
 
