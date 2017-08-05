@@ -82,8 +82,47 @@ Create skip-grams from an array of words.
 | words             | `ARRAY [INTEGER] = STRING` | An array of words e.g. `["these", "are", "words"]`                                                                                                                                                                                                                                      | 
 | size              | `INTEGER`                  | Size of the n-grams e.g. `2`: `"these are", "are words"`                                                                                                                                                                                                                                | 
 | distance          | `INTEGER`                  | Distance to skip to create skip-grams, e.g. `5` will create skip-grams using the base word (or n-gram) and n-grams from the 5 following words.                                                                                                                                          | 
-| sortForDuplicates | `INTEGER`                  | Pass `__ngrams.SORT_NGRAMS` or `__ngrams.DONT_SORT_NGRAMS`. Sorting n-grams alphabetically can help flag up duplicates e.g. when creating a bag of words/n-grams/skip-grams. If you only care about pairing n-grams by proximity but not by direction, use `__ngrams.DONT_SORT_NGRAMS`. | 
+| sortForDuplicates | `INTEGER`                  | Pass `__ngrams.SORT_NGRAMS` or `__ngrams.DONT_SORT_NGRAMS`. Sorting n-grams alphabetically can help flag up duplicates e.g. when creating a [bag of words/n-grams/skip-grams](https://en.wikipedia.org/wiki/Bag-of-words_model#Example_implementation). If you only care about pairing n-grams by proximity but not by direction, use `__ngrams.DONT_SORT_NGRAMS`. | 
 
+Returns an array of n-grams found near one another within `distance` words (`ARRAY [INTEGER][INTEGER] = STRING`).
+
+```
+let words = __ngrams.SanitiseToWords("   Turning and turning in the widening gyre\r\n    The falcon cannot hear the falconer;\r\n    Things fall apart; the centre cannot hold;\r\n    Mere anarchy is loosed upon the world   ");
+
+let skipGrams = __ngrams.SkipGrams(words, 1, 2, __ngrams.DONT_SORT_NGRAMS);
+console.log(skipGrams);
+```
+
+Output (truncated):
+
+```
+[ [ 'Turning', 'and' ],
+  [ 'Turning', 'turning' ],
+  [ 'and', 'turning' ],
+  [ 'and', 'in' ],
+  [ 'turning', 'in' ],
+  [ 'turning', 'the' ],
+...
+```
+
+You can choose instead to pass `__ngrams.SORT_NGRAMS` and this will make direction irrelevant (e.g. it will be easier to sport `["Turning", "and"]` and `["and", "turning"]` as the same words because they are now sorted to `["Turning", "and"]` and `["turning", "and"]`. Using method `BagOfSkipGrams` (passing `__ngrams.CASE_INSENSITIVE`) would then remove one of these as a duplicate.
+
+```
+let skipGrams = __ngrams.SkipGrams(words, 1, 2, __ngrams.SORT_NGRAMS);
+console.log(skipGrams);
+```
+
+Output (truncated):
+
+```
+[ [ 'and', 'Turning' ],
+  [ 'turning', 'Turning'
+  [ 'and', 'turning' ],
+  [ 'and', 'in' ],
+  [ 'in', 'turning' ],
+  [ 'the', 'turning' ],
+...
+```
 
 ### 
 
