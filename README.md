@@ -30,7 +30,7 @@ Output:
 [ 'these are', 'are some', 'some words' ]
 ```
 
-`"these are some words".split(" ")`` is nice and simple, but often our source text is not so simple. You may choose to use some sort of NLP tokeniser.
+`"these are some words".split(" ")` is nice and simple, but often our source text is not so simple. You may choose to use some sort of NLP tokeniser.
 This library provides a rudimentary method, SanitiseToWords, to get rid of things like double spaces, punctuation, and so on in a string before splitting it into words.
 
 ```
