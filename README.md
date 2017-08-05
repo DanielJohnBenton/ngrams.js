@@ -185,6 +185,10 @@ let bagOfWords = __ngrams.BagOfWords(words, __ngrams.CASE_INSENSITIVE);
 console.log(bagOfWords);
 ```
 
+### :shell: BagOfSkipGrams
+
+### :shell: SanitiseToWords
+
 ## Acknowledgements
 - [CSV to Markdown Table Generator](https://donatstudios.com/CsvToMarkdownTable) - Donat Studios
 
