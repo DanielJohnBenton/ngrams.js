@@ -132,8 +132,58 @@ Remove duplicates from an array of words or n-grams. Can be case sensitive or in
 |-----------------|----------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------| 
 | words           | `ARRAY [INTEGER] = STRING` | An array of words e.g. `["these", "are", "words"]`.                                                                                                                                                                                                      | 
 | n               | `INTEGER`                  | Size of the n-grams e.g. `2` creates bigrams `["these are", "are words"]`                                                                                                                                                                                | 
+| caseSensitivity | `INTEGER`                  | Pass `__ngrams.CASE_SENSITIVE` or `__ngrams.CASE_INSENSITIVE`. Case insensitive calls will ignore differences in case when removing duplicates e.g. `"Turning"`, `"turning"`, `"TURNING"` will all be seen as identical and reduced to just `"Turning"`. | 
+
+Returns an array of n-grams with duplicates removed (`ARRAY [INTEGER] = STRING`).
+
+```
+let words = __ngrams.SanitiseToWords("   Turning and turning in the widening gyre\r\n    The falcon cannot hear the falconer;\r\n    Things fall apart; the centre cannot hold;\r\n    Mere anarchy is loosed upon the world   ");
+
+let bagOfWords = __ngrams.BagOfNgrams(words, 1, __ngrams.CASE_INSENSITIVE);
+console.log(bagOfWords);
+```
+
+Output:
+
+```
+[ 'Turning',
+  'and',
+  'in',
+  'the',
+  'widening',
+  'gyre',
+  'falcon',
+  'cannot',
+  'hear',
+  'falconer',
+  'Things',
+  'fall',
+  'apart',
+  'centre',
+  'hold',
+  'Mere',
+  'anarchy',
+  'is',
+  'loosed',
+  'upon',
+  'world' ]
+```
+
+### :shell: BagOfWords
+
+This is just a wrapper function for readability that calls BagOfNgrams with a n-gram size (`n`) of `1`.
+
+| Parameter       | Type                       | Description                                                                                                                                                                                                                                              | 
+|-----------------|----------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------| 
+| words           | `ARRAY [INTEGER] = STRING` | An array of words e.g. `["these", "are", "words"]`.                                                                                                                                                                                                      | 
 | caseSensitivity | `INTEGER`                  | Pass `__ngrams.CASE_SENSITIVE` or `__ngrams.CASE_INSENSITIVE`. Case insensitive calls will ignore differences in case when removing duplicates e.g. `"Turning"`, `"turning"`, `"TURNING"` will all be seen as identical and reduces to just `"Turning"`. | 
 
+Returns an array of words with duplicates removed (`ARRAY [INTEGER] = STRING`).
+
+```
+let bagOfWords = __ngrams.BagOfWords(words, __ngrams.CASE_INSENSITIVE);
+console.log(bagOfWords);
+```
 
 ## Acknowledgements
 - [CSV to Markdown Table Generator](https://donatstudios.com/CsvToMarkdownTable) - Donat Studios
