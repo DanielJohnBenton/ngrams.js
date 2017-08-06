@@ -324,3 +324,4 @@ Output:
 
 ## Acknowledgements
 - [CSV to Markdown Table Generator](https://donatstudios.com/CsvToMarkdownTable) - Donat Studios
+- [Emoji cheat sheet](http://www.webpagefx.com/tools/emoji-cheat-sheet/) - WebpageFX
