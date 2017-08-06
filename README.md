@@ -190,7 +190,6 @@ Returns an array of words with duplicates removed (`ARRAY [INTEGER] = STRING`).
 
 ```
 let bagOfWords = __ngrams.BagOfWords(words, __ngrams.CASE_INSENSITIVE);
-console.log(bagOfWords);
 ```
 
 ### :shell: BagOfSkipGrams
