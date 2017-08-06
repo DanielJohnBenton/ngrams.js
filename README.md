@@ -197,6 +197,62 @@ Generates skip-grams and removes duplicates. Can ignore direction by passing `__
 | sortForDuplicates | `INTEGER`                  | Pass `__ngrams.SORT_NGRAMS` or `__ngrams.DONT_SORT_NGRAMS`. Sorting n-grams alphabetically can help flag up duplicates e.g. when creating a [bag of words/n-grams/skip-grams](https://en.wikipedia.org/wiki/Bag-of-words_model#Example_implementation). If you only care about pairing n-grams by proximity but not by direction, use `__ngrams.DONT_SORT_NGRAMS`. | 
 | caseSensitivity   | `INTEGER`                  | Pass `__ngrams.CASE_SENSITIVE` or `__ngrams.CASE_INSENSITIVE`. Case insensitive calls will ignore differences in case when removing duplicates e.g. `"Turning"`, `"turning"`, `"TURNING"` will all be seen as identical and reduces to just `"Turning"`.                                                                                                           | 
 
+Case sensitive, direction sensitive:
+
+```
+let words = "Something and SOMETHING and something and something".split(" ");
+
+let skipGrams = __ngrams.BagOfSkipGrams(words, 2, 2, __ngrams.DONT_SORT_NGRAMS, __ngrams.CASE_SENSITIVE);
+console.log(skipGrams);
+```
+
+Output:
+
+```
+[ [ 'Something and', 'and SOMETHING' ],
+  [ 'Something and', 'SOMETHING and' ],
+  [ 'and SOMETHING', 'SOMETHING and' ],
+  [ 'and SOMETHING', 'and something' ],
+  [ 'SOMETHING and', 'and something' ],
+  [ 'SOMETHING and', 'something and' ],
+  [ 'and something', 'something and' ],
+  [ 'and something', 'and something' ],
+  [ 'something and', 'and something' ] ]
+```
+
+Case sensitive, direction insensitive `__ngrams.BagOfSkipGrams(words, 2, 2, __ngrams.SORT_NGRAMS, __ngrams.CASE_SENSITIVE)`:
+
+```
+[ [ 'and SOMETHING', 'Something and' ],
+  [ 'Something and', 'SOMETHING and' ],
+  [ 'and SOMETHING', 'SOMETHING and' ],
+  [ 'and something', 'and SOMETHING' ],
+  [ 'and something', 'SOMETHING and' ],
+  [ 'something and', 'SOMETHING and' ],
+  [ 'and something', 'something and' ],
+  [ 'and something', 'and something' ] ]
+```
+
+Case insensitive, direction insensitive `__ngrams.BagOfSkipGrams(words, 2, 2, __ngrams.SORT_NGRAMS, __ngrams.CASE_INSENSITIVE)`:
+
+```
+[ [ 'and SOMETHING', 'Something and' ],
+  [ 'Something and', 'SOMETHING and' ],
+  [ 'and something', 'and SOMETHING' ] ]
+```
+
+Case insensitive, direction sensitive `__ngrams.BagOfSkipGrams(words, 2, 2, __ngrams.SORT_NGRAMS, __ngrams.CASE_SENSITIVE)`:
+
+```
+[ [ 'and SOMETHING', 'Something and' ],
+  [ 'Something and', 'SOMETHING and' ],
+  [ 'and SOMETHING', 'SOMETHING and' ],
+  [ 'and something', 'and SOMETHING' ],
+  [ 'and something', 'SOMETHING and' ],
+  [ 'something and', 'SOMETHING and' ],
+  [ 'and something', 'something and' ],
+  [ 'and something', 'and something' ] ]
+```
 
 ### :shell: SanitiseToWords
 

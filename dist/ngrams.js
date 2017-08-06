@@ -144,15 +144,12 @@ exports.BagOfSkipGrams = function(words, size, distance, sortForDuplicates, case
 	{
 		for(let i in skipGrams)
 		{
-			skipGrams[i][0] = skipGrams[i][0].toLowerCase();
-			skipGrams[i][1] = skipGrams[i][1].toLowerCase();
-			
 			if(sortForDuplicates == this.SORT_NGRAMS)
 			{
 				skipGrams[i].sort(
 					function(a, b)
 					{
-						return a.localeCompare(b);
+						return a.toLowerCase().localeCompare(b.toLowerCase());
 					}
 				);
 			}
@@ -165,6 +162,11 @@ exports.BagOfSkipGrams = function(words, size, distance, sortForDuplicates, case
 	for(let i in skipGrams)
 	{
 		let id = "_"+ JSON.stringify(skipGrams[i]);
+		
+		if(caseSensitivity == this.CASE_INSENSITIVE)
+		{
+			id = id.toLowerCase();
+		}
 		
 		if(typeof(lookup[id]) == "undefined")
 		{
