@@ -140,19 +140,16 @@ exports.BagOfSkipGrams = function(words, size, distance, sortForDuplicates, case
 {
 	let skipGrams = this.SkipGrams(words, size, distance, sortForDuplicates);
 	
-	if(caseSensitivity == this.CASE_INSENSITIVE)
+	if(caseSensitivity == this.CASE_INSENSITIVE && sortForDuplicates == this.SORT_NGRAMS)
 	{
 		for(let i in skipGrams)
 		{
-			if(sortForDuplicates == this.SORT_NGRAMS)
-			{
-				skipGrams[i].sort(
-					function(a, b)
-					{
-						return a.toLowerCase().localeCompare(b.toLowerCase());
-					}
-				);
-			}
+			skipGrams[i].sort(
+				function(a, b)
+				{
+					return a.toLowerCase().localeCompare(b.toLowerCase());
+				}
+			);
 		}
 	}
 	
