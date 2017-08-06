@@ -79,8 +79,8 @@ exports.SkipGrams = function(words, size, distance, sortForDuplicates)
 	return skipGrams;
 }
 
-exports.CASE_SENSITIVE = 1;
-exports.CASE_INSENSITIVE = 2;
+exports.CASE_SENSITIVE = 3;
+exports.CASE_INSENSITIVE = 4;
 
 /*
 	BagOfNgrams (
@@ -138,6 +138,16 @@ exports.BagOfWords = function(words, caseSensitivity)
 */
 exports.BagOfSkipGrams = function(words, size, distance, sortForDuplicates, caseSensitivity)
 {
+	if(sortForDuplicates != this.SORT_NGRAMS && sortForDuplicates != this.DONT_SORT_NGRAMS)
+	{
+		throw "ERROR [ngrams.js] - BagOfSkipGrams not passed this.SORT_NGRAMS or this.DONT_SORT_NGRAMS as 4th parameter.";
+	}
+	
+	if(caseSensitivity != this.CASE_SENSITIVE && caseSensitivity != this.CASE_INSENSITIVE)
+	{
+		throw "ERROR [ngrams.js] - BagOfSkipGrams not passed this.CASE_SENSITIVE or this.CASE_INSENSITIVE as 5th parameter.";
+	}
+	
 	let skipGrams = this.SkipGrams(words, size, distance, sortForDuplicates);
 	
 	if(caseSensitivity == this.CASE_INSENSITIVE && sortForDuplicates == this.SORT_NGRAMS)
