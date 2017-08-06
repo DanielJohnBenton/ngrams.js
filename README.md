@@ -197,6 +197,8 @@ Generates skip-grams and removes duplicates. Can ignore direction by passing `__
 | sortForDuplicates | `INTEGER`                  | Pass `__ngrams.SORT_NGRAMS` or `__ngrams.DONT_SORT_NGRAMS`. Sorting n-grams alphabetically can help flag up duplicates e.g. when creating a [bag of words/n-grams/skip-grams](https://en.wikipedia.org/wiki/Bag-of-words_model#Example_implementation). If you only care about pairing n-grams by proximity but not by direction, use `__ngrams.DONT_SORT_NGRAMS`. | 
 | caseSensitivity   | `INTEGER`                  | Pass `__ngrams.CASE_SENSITIVE` or `__ngrams.CASE_INSENSITIVE`. Case insensitive calls will ignore differences in case when removing duplicates e.g. `"Turning"`, `"turning"`, `"TURNING"` will all be seen as identical and reduces to just `"Turning"`.                                                                                                           | 
 
+Returns an array of arrays of paired n-grams `ARRAY [INTEGER][INTEGER] = STRING`.
+
 Case sensitive, direction sensitive:
 
 ```
@@ -256,25 +258,37 @@ Case insensitive, direction sensitive `__ngrams.BagOfSkipGrams(words, 2, 2, __ng
 
 ### :shell: SanitiseToWords
 
+A rudimentary method that attempts to refine messy text into an array of words.
+
+| Parameter | Type     | Description                                   | 
+|-----------|----------|-----------------------------------------------| 
+| text      | `STRING` | The source text you want to split into words. | 
+
+Note that this is mainly only good for English-language text - it does not support accented characters etc.
+
+Its approach is to replace anything outwith a small list of allowable characters with a space, avoiding any double spacing, and then split by those spaces.
+
+This works quite well for many English-language texts - with the occasional mistake.
+
+However, you may prefer to roll your own sanitisation/splitting/[tokenisation method](https://en.wikipedia.org/wiki/Lexical_analysis#Tokenization) based more closely on your source text(s). You might like to use this '[natural](https://github.com/NaturalNode/natural#tokenizers)' library's tokenizers.
+
+```
+let words = __ngrams.SanitiseToWords("   Turning and turning in the widening gyre\r\n    The falcon cannot hear the falconer;\r\n    Things fall apart; the centre cannot hold;\r\n    Mere anarchy is loosed upon the world   ");
+console.log(words);
+```
+
+Output:
+
+```
+[ 'Turning', 'and', 'turning', 'in', 'the', 'widening', 'gyre', 
+	'The', 'falcon', 'cannot', 'hear', 'the', 'falconer', 
+	'Things', 'fall', 'apart', 'the', 'centre', 'cannot', 'hold', 
+	'Mere', 'anarchy', 'is', 'loosed', 'upon', 'the', 'world' ]
+```
+
+## Interesting/Useful Links
+- [natural](https://github.com/NaturalNode/natural) - an NLP library for Node.js
+- [n-gram](https://en.wikipedia.org/wiki/N-gram) - Wikipedia
+
 ## Acknowledgements
 - [CSV to Markdown Table Generator](https://donatstudios.com/CsvToMarkdownTable) - Donat Studios
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
