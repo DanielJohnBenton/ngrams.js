@@ -47,6 +47,14 @@ See documentation below for more information.
 
 ## Methods
 
+- [Ngrams](https://github.com/DanielJohnBenton/ngrams.js#shell-ngrams)
+- [SkipGrams](https://github.com/DanielJohnBenton/ngrams.js#shell-skipgrams)
+- [BagOfNgrams](https://github.com/DanielJohnBenton/ngrams.js#shell-bagofngrams)
+- [BagOfWords](https://github.com/DanielJohnBenton/ngrams.js#shell-bagofwords)
+- [BagOfSkipGrams](https://github.com/DanielJohnBenton/ngrams.js#shell-bagofskipgrams)
+- [ConcatSkipGrams](https://github.com/DanielJohnBenton/ngrams.js#shell-concatskipgrams)
+- [SanitiseToWords](https://github.com/DanielJohnBenton/ngrams.js#shell-sanitisetowords)
+
 ### :shell: Ngrams
 
 Create [n-grams](https://en.wikipedia.org/wiki/N-gram#Examples) from an array of words.
