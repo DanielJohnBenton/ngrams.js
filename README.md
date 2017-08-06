@@ -256,6 +256,31 @@ Case insensitive, direction sensitive `__ngrams.BagOfSkipGrams(words, 2, 2, __ng
   [ 'and something', 'and something' ] ]
 ```
 
+### :shell: ConcatSkipGrams
+
+Pass skip-grams through this method if you would prefer a simpler array of strings where skip-grams have been concatenated into a single string.
+
+| Parameter | Type                                | Description                                                                                                                                                                  | 
+|-----------|-------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------| 
+| skipGrams | `ARRAY [INTEGER][INTEGER] = STRING` | An array of skip-grams created using `SkipGrams` or `BagOfSkipGrams` which you want to simplify into `ARRAY [INTEGER] = STRING` by joining each n-gram pair into one string. | 
+
+Example:
+
+```
+let skipGrams = __ngrams.SkipGrams(["these", "are", "some", "words"], 2, 2, __ngrams.DONT_SORT_NGRAMS);
+
+skipGrams = __ngrams.ConcatSkipGrams(skipGrams);
+console.log(skipGrams);
+```
+
+Output:
+
+```
+[ 'these are are some',
+  'these are some words',
+  'are some some words' ]
+```
+
 ### :shell: SanitiseToWords
 
 A rudimentary method that attempts to refine messy text into an array of words.

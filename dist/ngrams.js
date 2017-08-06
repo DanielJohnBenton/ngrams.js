@@ -187,6 +187,23 @@ exports.BagOfSkipGrams = function(words, size, distance, sortForDuplicates, case
 }
 
 /*
+	ConcatSkipGrams (
+		ARRAY [INTEGER][INTEGER] = STRING
+	): ARRAY [INTEGER] = STRING
+*/
+exports.ConcatSkipGrams = function(skipGrams)
+{
+	let concatenated = [];
+	
+	for(let i in skipGrams)
+	{
+		concatenated.push(skipGrams[i].join(" "));
+	}
+	
+	return concatenated;
+}
+
+/*
 	SanitiseToWords (
 		STRING text
 	): ARRAY [INTEGER] = STRING
