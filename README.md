@@ -250,18 +250,13 @@ Case insensitive, direction insensitive `__ngrams.BagOfSkipGrams(words, 2, 2, __
   [ 'and something', 'and SOMETHING' ] ]
 ```
 
-Case insensitive, direction sensitive `__ngrams.BagOfSkipGrams(words, 2, 2, __ngrams.DONT_SORT_NGRAMS, __ngrams.CASE_SENSITIVE)`:
+Case insensitive, direction sensitive `__ngrams.BagOfSkipGrams(words, 2, 2, __ngrams.DONT_SORT_NGRAMS, __ngrams.CASE_INSENSITIVE)`:
 
 ```
 [ [ 'Something and', 'and SOMETHING' ],
   [ 'Something and', 'SOMETHING and' ],
   [ 'and SOMETHING', 'SOMETHING and' ],
-  [ 'and SOMETHING', 'and something' ],
-  [ 'SOMETHING and', 'and something' ],
-  [ 'SOMETHING and', 'something and' ],
-  [ 'and something', 'something and' ],
-  [ 'and something', 'and something' ],
-  [ 'something and', 'and something' ] ]
+  [ 'and SOMETHING', 'and something' ] ]
 ```
 
 ### :shell: ConcatSkipGrams
