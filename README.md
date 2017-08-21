@@ -179,7 +179,7 @@ Output:
 
 ### :shell: BagOfWords
 
-This is just a wrapper function for readability that calls BagOfNgrams with a n-gram size (`n`) of `1`.
+This is just a wrapper function for readability that calls `BagOfNgrams` with an n-gram size (`n`) of `1`.
 
 | Parameter       | Type                       | Description                                                                                                                                                                                                                                              | 
 |-----------------|----------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------| 
